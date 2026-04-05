@@ -37,6 +37,6 @@ O sistema segue o padrão de arquitetura em camadas, garantindo organização, e
 
 ---
 
-## 👤 Autor
-**Isadora Fernandes**  
-🎓 Estudante de Análise e Desenvolvimento de Sistemas  
+## 👤 Autores
+**Isadora Fernandes** e **Jhonata Araujo**  
+🎓 Análise e Desenvolvimento de Sistemas  
