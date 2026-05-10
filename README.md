@@ -92,12 +92,12 @@ Os testes da API foram realizados utilizando:
 
 Testes executados:
 
-✅ Login com JWT
-✅ CRUD completo de clientes
-✅ CRUD completo de produtos
-✅ Testes de autenticação
-✅ Validação de exceções
-✅ Integração com banco de dados MySQL
+- ✅ Login com JWT
+- ✅ CRUD completo de clientes
+- ✅ CRUD completo de produtos
+- ✅ Testes de autenticação
+- ✅ Validação de exceções
+- ✅ Integração com banco de dados MySQL
 
 📘 Documentação Swagger
 
