@@ -37,6 +37,76 @@ O sistema segue o padrão de arquitetura em camadas, garantindo organização, e
 
 ---
 
+## 🔐 Autenticação JWT
+
+O sistema utiliza autenticação com JWT (JSON Web Token) para proteger os endpoints da API.
+
+Fluxo de autenticação:
+
+1. Realizar login no endpoint:
+POST /auth/login
+
+2. Copiar o token retornado
+
+3. Enviar o token nas requisições protegidas:
+
+Authorization: Bearer SEU_TOKEN
+
+## 🌐 Endpoints Principais
+
+👥 Clientes
+
+GET /clientes
+POST /clientes
+PUT /clientes/{id}
+DELETE /clientes/{id}
+
+📦 Produtos
+
+GET /produtos
+POST /produtos
+PUT /produtos/{id}
+DELETE /produtos/{id}
+
+🔐 Login
+
+POST /auth/login
+
+⚠️ Tratamento de Exceções
+
+O sistema possui tratamento global de exceções utilizando @RestControllerAdvice.
+
+Exceções implementadas:
+
+• ClienteNaoEncontradoException
+• ProdutoNaoEncontradoException
+• CPFJaCadastradoException
+• PrecoInvalidoException
+
+🧪 Testes Realizados
+
+Os testes da API foram realizados utilizando:
+
+• Swagger UI
+• Postman
+
+Testes executados:
+
+✅ Login com JWT
+✅ CRUD completo de clientes
+✅ CRUD completo de produtos
+✅ Testes de autenticação
+✅ Validação de exceções
+✅ Integração com banco de dados MySQL
+
+📘 Documentação Swagger
+
+Após iniciar o projeto, acesse:
+
+http://localhost:8080/swagger-ui.html
+
+---
+
 ## 👤 Autores
 **Isadora Fernandes** e **Jhonata Araujo**  
 🎓 Análise e Desenvolvimento de Sistemas  
