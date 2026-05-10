@@ -41,56 +41,71 @@ O sistema segue o padrão de arquitetura em camadas, garantindo organização, e
 
 O sistema utiliza autenticação com JWT (JSON Web Token) para proteger os endpoints da API.
 
-Fluxo de autenticação:
+### Fluxo de autenticação
 
 1. Realizar login no endpoint:
+
+```http
 POST /auth/login
+```
 
 2. Copiar o token retornado
 
 3. Enviar o token nas requisições protegidas:
 
+```http
 Authorization: Bearer SEU_TOKEN
+```
+
+---
 
 ## 🌐 Endpoints Principais
 
-👥 Clientes
+### 👥 Clientes
 
 - GET /clientes
+- GET /clientes/{id}
 - POST /clientes
 - PUT /clientes/{id}
 - DELETE /clientes/{id}
 
-📦 Produtos
+### 📦 Produtos
 
 - GET /produtos
+- GET /produtos/{id}
 - POST /produtos
 - PUT /produtos/{id}
 - DELETE /produtos/{id}
 
-🔐 Login
+### 🔐 Login
 
+```http
 POST /auth/login
+```
 
-⚠️ Tratamento de Exceções
+---
 
-O sistema possui tratamento global de exceções utilizando @RestControllerAdvice.
+## ⚠️ Tratamento de Exceções
 
-Exceções implementadas:
+O sistema possui tratamento global de exceções utilizando `@RestControllerAdvice`.
+
+### Exceções implementadas
 
 - ClienteNaoEncontradoException
 - ProdutoNaoEncontradoException
 - CPFJaCadastradoException
 - PrecoInvalidoException
 
-🧪 Testes Realizados
+---
+
+## 🧪 Testes Realizados
 
 Os testes da API foram realizados utilizando:
 
 - Swagger UI
 - Postman
 
-Testes executados:
+### Testes executados
 
 - ✅ Login com JWT
 - ✅ CRUD completo de clientes
@@ -99,14 +114,108 @@ Testes executados:
 - ✅ Validação de exceções
 - ✅ Integração com banco de dados MySQL
 
-📘 Documentação Swagger
+---
 
-Após iniciar o projeto, acesse:
+## ⚙️ Como Executar o Projeto
 
+### ✅ Pré-requisitos
+
+Antes de executar o projeto, é necessário ter instalado:
+
+- **Java 21**
+- **MySQL Server 8+**
+- **Maven**
+- **Postman ou Swagger para testes da API**
+
+---
+
+## 📥 Clonando o Projeto
+
+Abra o terminal e execute:
+
+```bash
+git clone https://github.com/IsaFernandes02/SGC-Boutique.git
+```
+
+Depois entre na pasta:
+
+```bash
+cd SGC-Boutique
+```
+
+---
+
+## 🗄️ Configuração do Banco de Dados
+
+1. Crie um banco no MySQL:
+
+```sql
+CREATE DATABASE sgc_boutique;
+```
+
+2. Execute o script SQL localizado em:
+
+```text
+/database/sgc.sql
+```
+
+---
+
+## 🔧 Configuração do application.properties
+
+No arquivo:
+
+```text
+src/main/resources/application.properties
+```
+
+Configure:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/sgc_boutique
+spring.datasource.username=SEU_USUARIO
+spring.datasource.password=SUA_SENHA
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
+---
+
+## ▶️ Executando o Projeto
+
+Execute a aplicação pela IDE ou utilize:
+
+```bash
+mvn spring-boot:run
+```
+
+A API ficará disponível em:
+
+```text
+http://localhost:8080
+```
+
+---
+
+## 🧪 Testando a API
+
+A API pode ser testada utilizando:
+
+- Postman
+- Swagger
+
+### Swagger
+
+```text
 http://localhost:8080/swagger-ui.html
+```
+
+O sistema retornará um token JWT para autenticação das requisições protegidas.
 
 ---
 
 ## 👤 Autores
+
 **Isadora Fernandes** e **Jhonata Araujo**  
-🎓 Análise e Desenvolvimento de Sistemas  
+🎓 Análise e Desenvolvimento de Sistemas
