@@ -56,17 +56,17 @@ Authorization: Bearer SEU_TOKEN
 
 👥 Clientes
 
-GET /clientes
-POST /clientes
-PUT /clientes/{id}
-DELETE /clientes/{id}
+- GET /clientes
+- POST /clientes
+- PUT /clientes/{id}
+- DELETE /clientes/{id}
 
 📦 Produtos
 
-GET /produtos
-POST /produtos
-PUT /produtos/{id}
-DELETE /produtos/{id}
+- GET /produtos
+- POST /produtos
+- PUT /produtos/{id}
+- DELETE /produtos/{id}
 
 🔐 Login
 
@@ -78,17 +78,17 @@ O sistema possui tratamento global de exceções utilizando @RestControllerAdvic
 
 Exceções implementadas:
 
-• ClienteNaoEncontradoException
-• ProdutoNaoEncontradoException
-• CPFJaCadastradoException
-• PrecoInvalidoException
+- ClienteNaoEncontradoException
+- ProdutoNaoEncontradoException
+- CPFJaCadastradoException
+- PrecoInvalidoException
 
 🧪 Testes Realizados
 
 Os testes da API foram realizados utilizando:
 
-• Swagger UI
-• Postman
+- Swagger UI
+- Postman
 
 Testes executados:
 
