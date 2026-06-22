@@ -1,6 +1,7 @@
 # 👗 SGC - Boutique Chic & Elegance
 
 ## 📋 Sobre o Projeto
+
 Sistema de Gestão Comercial (SGC) desenvolvido para uma boutique de moda feminina, com foco no controle de estoque, vendas e gestão de clientes.
 
 O sistema foi projetado para auxiliar pequenos negócios na organização de suas operações diárias, proporcionando mais controle, eficiência e praticidade na gestão.
@@ -10,30 +11,34 @@ O sistema foi projetado para auxiliar pequenos negócios na organização de sua
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-- **Linguagem:** Java 21  
-- **Framework:** Spring Boot 3+  
-- **Banco de Dados:** MySQL  
-- **Segurança:** Spring Security + JWT (JSON Web Token)  
-- **Arquitetura:** Arquitetura em Camadas  
+
+* **Linguagem:** Java 21
+* **Framework:** Spring Boot 3+
+* **Banco de Dados:** MySQL
+* **Segurança:** Spring Security + JWT (JSON Web Token)
+* **Frontend:** HTML, CSS, JavaScript, Bootstrap
+* **Arquitetura:** Arquitetura em Camadas
 
 ---
 
 ## 🏗️ Arquitetura do Sistema
+
 O sistema segue o padrão de arquitetura em camadas, garantindo organização, escalabilidade e facilidade de manutenção:
 
-- **Apresentação:** Interface (Java Swing ou Web) que consome a API REST  
-- **Controller:** Responsável pelos endpoints da API  
-- **Service:** Contém as regras de negócio  
-- **Domain:** Entidades e modelos do sistema  
-- **Repository:** Comunicação com o banco de dados via JPA  
+* **Apresentação:** Interface Web que consome a API REST
+* **Controller:** Responsável pelos endpoints da API
+* **Service:** Contém as regras de negócio
+* **Domain:** Entidades e modelos do sistema
+* **Repository:** Comunicação com o banco de dados via JPA
 
 ---
 
 ## 🚀 Funcionalidades
-- 📦 Controle de estoque  
-- 💰 Registro de vendas  
-- 👥 Gestão de clientes  
-- 📊 Geração de relatórios  
+
+* 📦 Controle de estoque
+* 💰 Registro de vendas
+* 👥 Gestão de clientes
+* 📄 Relatório de vendas
 
 ---
 
@@ -63,19 +68,24 @@ Authorization: Bearer SEU_TOKEN
 
 ### 👥 Clientes
 
-- GET /clientes
-- GET /clientes/{id}
-- POST /clientes
-- PUT /clientes/{id}
-- DELETE /clientes/{id}
+* GET /clientes
+* GET /clientes/{id}
+* POST /clientes
+* PUT /clientes/{id}
+* DELETE /clientes/{id}
 
 ### 📦 Produtos
 
-- GET /produtos
-- GET /produtos/{id}
-- POST /produtos
-- PUT /produtos/{id}
-- DELETE /produtos/{id}
+* GET /produtos
+* GET /produtos/{id}
+* POST /produtos
+* PUT /produtos/{id}
+* DELETE /produtos/{id}
+
+### 💰 Vendas
+
+* GET /vendas
+* POST /vendas
 
 ### 🔐 Login
 
@@ -85,16 +95,28 @@ POST /auth/login
 
 ---
 
+## 🌐 Interface Web
+
+O sistema possui interface web integrada à API, contendo:
+
+* Dashboard com indicadores (clientes, produtos, vendas e faturamento)
+* Tela de clientes
+* Tela de produtos
+* Tela de vendas
+* Tela de relatórios
+
+---
+
 ## ⚠️ Tratamento de Exceções
 
 O sistema possui tratamento global de exceções utilizando `@RestControllerAdvice`.
 
 ### Exceções implementadas
 
-- ClienteNaoEncontradoException
-- ProdutoNaoEncontradoException
-- CPFJaCadastradoException
-- PrecoInvalidoException
+* ClienteNaoEncontradoException
+* ProdutoNaoEncontradoException
+* CPFJaCadastradoException
+* PrecoInvalidoException
 
 ---
 
@@ -102,17 +124,20 @@ O sistema possui tratamento global de exceções utilizando `@RestControllerAdvi
 
 Os testes da API foram realizados utilizando:
 
-- Swagger UI
-- Postman
+* Swagger UI
+* Postman
 
 ### Testes executados
 
-- ✅ Login com JWT
-- ✅ CRUD completo de clientes
-- ✅ CRUD completo de produtos
-- ✅ Testes de autenticação
-- ✅ Validação de exceções
-- ✅ Integração com banco de dados MySQL
+* ✅ Login com JWT
+* ✅ CRUD completo de clientes
+* ✅ CRUD completo de produtos
+* ✅ Registro de vendas
+* ✅ Atualização automática de estoque
+* ✅ Testes de autenticação
+* ✅ Validação de exceções
+* ✅ Integração com banco de dados MySQL
+* ✅ Relatório de vendas
 
 ---
 
@@ -122,10 +147,9 @@ Os testes da API foram realizados utilizando:
 
 Antes de executar o projeto, é necessário ter instalado:
 
-- **Java 21**
-- **MySQL Server 8+**
-- **Maven**
-- **Postman ou Swagger para testes da API**
+* **Java 21**
+* **MySQL Server 8+**
+* **Maven**
 
 ---
 
@@ -202,8 +226,8 @@ http://localhost:8080
 
 A API pode ser testada utilizando:
 
-- Postman
-- Swagger
+* Postman
+* Swagger
 
 ### Swagger
 
@@ -211,11 +235,11 @@ A API pode ser testada utilizando:
 http://localhost:8080/swagger-ui.html
 ```
 
-O sistema retornará um token JWT para autenticação das requisições protegidas.
-
 ---
 
 ## 👤 Autores
 
-**Isadora Fernandes** e **Jhonata Araujo**  
-🎓 Análise e Desenvolvimento de Sistemas
+**Isadora Fernandes**
+**Jhonata Araujo**
+
+🎓 Análise e Desenvolvimento de Sistemas – CEUB
